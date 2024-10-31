@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    image: finsteco-be
+    build: .
+    container_name: 'finsteco-be'
+    restart: always
+    env_file: .env
+    ports:
+      - "4869:4869"
+    networks:
+      - finsteco
+    volumes:
+      - ./assets:/app/assets
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+
+networks:
+  finsteco:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.227.104.0/24
+          gateway: 172.227.104.1
