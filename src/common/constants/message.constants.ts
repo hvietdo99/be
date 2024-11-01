@@ -50,6 +50,11 @@ export enum ApiMessageKey {
   UPDATE_MASTER_WALLET_BALANCE_SUCCESS = 'UPDATE_MASTER_WALLET_BALANCE_SUCCESS',
   UPDATE_MASTER_WALLET_SUCCESS = 'UPDATE_MASTER_WALLET_SUCCESS',
   DELETE_MASTER_WALLET_SUCCESS = 'DELETE_MASTER_WALLET_SUCCESS',
+  GET_QUOTE_SUCCESS = 'GET_QUOTE_SUCCESS',
+  GET_TRANSACTION_HISTORY_SUCCESS = 'GET_TRANSACTION_HISTORY_SUCCESS',
+  GET_CURRENT_RATE_SUCCESS = 'GET_CURRENT_RATE_SUCCESS',
+  UPDATE_RATE_SUCCESS = 'UPDATE_RATE_SUCCESS',
+  GET_RATE_HISTORY_SUCCESS = 'GET_RATE_HISTORY_SUCCESS',
 }
 
 export const apiMessage: Record<ApiMessageKey, ApiMessageLanguage> = {
@@ -236,5 +241,25 @@ export const apiMessage: Record<ApiMessageKey, ApiMessageLanguage> = {
   [ApiMessageKey.FIAT_DEPOSIT_SUCCESS]: {
     vi: 'Nạp tiền fiat thành công.',
     en: 'Fiat deposit successful.',
+  },
+  [ApiMessageKey.GET_QUOTE_SUCCESS]: {
+    vi: 'Lấy báo giá thành công.',
+    en: 'Get quote successfully.',
+  },
+  [ApiMessageKey.GET_TRANSACTION_HISTORY_SUCCESS]: {
+    vi: 'Lấy lịch sử giao dịch thành công.',
+    en: 'Get transaction history successfully.',
+  },
+  [ApiMessageKey.GET_CURRENT_RATE_SUCCESS]: {
+    vi: 'Lấy tỷ giá hiện tại thành công.',
+    en: 'Get current rate successfully.',
+  },
+  [ApiMessageKey.UPDATE_RATE_SUCCESS]: {
+    vi: 'Cập nhật tỷ giá thành công.',
+    en: 'Update rate successfully.',
+  },
+  [ApiMessageKey.GET_RATE_HISTORY_SUCCESS]: {
+    vi: 'Lấy lịch sử tỷ giá thành công.',
+    en: 'Get rate history successfully.',
   },
 };

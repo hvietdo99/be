@@ -82,6 +82,9 @@ export class User {
   @Prop({ type: Number, required: true, default: 0 })
   fiat: number;
 
+  @Prop({ type: Number, required: true, default: 0 })
+  lockedFiat: number;
+
   @Prop({ type: Date, required: false })
   birthday: Date;
 
@@ -107,6 +110,19 @@ export class User {
 
   @Prop({ required: true, enum: KYCStatus, default: KYCStatus.PENDING })
   kycStatus: KYCStatus;
+
+  // OTC Trading Limits
+  @Prop({ type: Number, required: true, default: 0 })
+  dailyOtcVolume: number;
+
+  @Prop({ type: Date })
+  dailyVolumeResetDate: Date;
+
+  @Prop({ type: Number, required: true, default: 0 })
+  monthlyOtcVolume: number;
+
+  @Prop({ type: Date })
+  monthlyVolumeResetDate: Date;
 
   @Prop()
   createdAt: Date;

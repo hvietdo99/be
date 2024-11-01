@@ -43,6 +43,16 @@ export enum ErrorCode {
   ADDRESS_EXISTED = 'ADDRESS_EXISTED',
   UNSUPPORTED_NETWORK = 'UNSUPPORTED_NETWORK',
   INVALID_DEPOSIT = 'INVALID_DEPOSIT',
+  TRANSACTION_FAILED = 'TRANSACTION_FAILED',
+  INVALID_ORDER_STATE = 'INVALID_ORDER_STATE',
+  ORDER_NOT_FOUND = 'ORDER_NOT_FOUND',
+  ORDER_LIMIT_EXCEEDED = 'ORDER_LIMIT_EXCEEDED',
+  RATE_LIMIT_EXCEEDED = 'RATE_LIMIT_EXCEEDED',
+  SECURITY_REQUIREMENTS_NOT_MET = 'SECURITY_REQUIREMENTS_NOT_MET',
+  TRANSACTION_HISTORY_ERROR = 'TRANSACTION_HISTORY_ERROR',
+  INVALID_RATE = 'INVALID_RATE',
+  PRE_ORDER_PROCESSING_FAILED = 'PRE_ORDER_PROCESSING_FAILED',
+  ORDER_PROCESSING_FAILED = 'ORDER_PROCESSING_FAILED',
 }
 
 export const errorMessage: Record<ErrorCode, ApiMessageLanguage> = {
@@ -213,5 +223,45 @@ export const errorMessage: Record<ErrorCode, ApiMessageLanguage> = {
   [ErrorCode.INVALID_DEPOSIT]: {
     vi: 'Invalid deposit.',
     en: 'Invalid deposit.',
+  },
+  [ErrorCode.TRANSACTION_FAILED]: {
+    vi: 'Giao dịch thất bại.',
+    en: 'Transaction failed.',
+  },
+  [ErrorCode.INVALID_ORDER_STATE]: {
+    vi: 'Trạng thái đơn hàng không hợp lệ.',
+    en: 'Invalid order state.',
+  },
+  [ErrorCode.ORDER_NOT_FOUND]: {
+    vi: 'Không tìm thấy đơn hàng.',
+    en: 'Order not found.',
+  },
+  [ErrorCode.ORDER_LIMIT_EXCEEDED]: {
+    vi: 'Vượt quá giới hạn đơn hàng.',
+    en: 'Order limit exceeded.',
+  },
+  [ErrorCode.RATE_LIMIT_EXCEEDED]: {
+    vi: 'Vượt quá giới hạn tỷ lệ.',
+    en: 'Rate limit exceeded.',
+  },
+  [ErrorCode.SECURITY_REQUIREMENTS_NOT_MET]: {
+    vi: 'Yêu cầu bảo mật không được đáp ứng.',
+    en: 'Security requirements not met.',
+  },
+  [ErrorCode.TRANSACTION_HISTORY_ERROR]: {
+    vi: 'Lỗi khi lấy lịch sử giao dịch.',
+    en: 'Error retrieving transaction history.',
+  },
+  [ErrorCode.INVALID_RATE]: {
+    vi: 'Tỷ giá không hợp lệ.',
+    en: 'Invalid rate.',
+  },
+  [ErrorCode.PRE_ORDER_PROCESSING_FAILED]: {
+    vi: 'Xử lý đơn hàng trước thất bại.',
+    en: 'Pre-order processing failed.',
+  },
+  [ErrorCode.ORDER_PROCESSING_FAILED]: {
+    vi: 'Xử lý đơn hàng thất bại.',
+    en: 'Order processing failed.',
   },
 };

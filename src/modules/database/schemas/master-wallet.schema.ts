@@ -29,6 +29,9 @@ export class MasterWallet {
   })
   balance: Map<Network, number>;
 
+  @Prop({ type: Number, required: true, default: 0 })
+  fiat: number;
+
   @Prop({
     type: String,
     enum: MasterWalletType,
